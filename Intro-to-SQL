@@ -1,0 +1,33 @@
+📘 SQL Introduction
+
+🔹 What is SQL?
+
+SQL (Structured Query Language) is a programming language used to perform various operations on records stored in a database table. It is considered a database query language.
+
+SQL is used to:
+
+- Store data
+- Retrieve data
+- Manage databases
+- Analyze structured data
+
+
+It is mainly used in data analysis, business intelligence, and backend development.
+
+🔹 Why SQL is Important for Data Analysts
+    
+    As a Data Analyst, SQL helps you:
+
+- Extract data from databases
+- Clean and filter data
+- Perform aggregations (SUM, COUNT, AVG)
+- Join multiple tables
+- Generate business reports
+- Create dashboards
+
+Most companies use SQL with databases like:
+
+- MySQL
+- PostgreSQL
+- SQL Server
+- Oracle
