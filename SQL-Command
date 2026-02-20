@@ -23,3 +23,17 @@ DQL Commands are used to retrieve data from the database.
 
 DQL commands include:
 - SELECT : used to fetch data from one or more tables.
+
+4. DCL (DATA CONTROL LANGUAGE)
+DCL Commands are used to control access and permissions in the database.
+
+DCL commands include:
+- GRANT : used to give user access privileges to the database.
+- REVOKE : used to remove user access privileges from the database.
+
+5. TCL (TRANSACTION CONTROL LANGUAGE)
+TCL Commands are used to manage transactions in the database.
+
+TCL commands include:
+- COMMIT : used to save all changes made in the current transaction.
+- ROLLBACK : used to undo changes made in the current transaction.
