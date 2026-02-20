@@ -1,0 +1,12 @@
+SQL COMMAND
+
+
+DDL (DATA DEFINITION LANGUAGE)
+DDL Commands are used to define and manage database structures, such as tables, indexes, and schemas. 
+
+DDL commands include:
+- CREATE : used to create a new database, table, index, or view.
+- ALTER : used to modify an existing database, table, index, or view.
+- DROP : used to delete an existing database, table, index, or view.
+- TRUNCATE : used to delete all records from a table, but keep the structure intact.
+
