@@ -10,3 +10,10 @@ DDL commands include:
 - DROP : used to delete an existing database, table, index, or view.
 - TRUNCATE : used to delete all records from a table, but keep the structure intact.
 
+DML (DATA MANIPULATION LANGUAGE)
+DML Commands are used to manage and manipulate data stored inside database tables.
+
+DML commands include:
+-INSERT : used to add new records into a table.
+-UPDATE : used to modify existing records in a table.
+-DELETE : used to remove existing records from a table.
