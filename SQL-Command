@@ -124,4 +124,16 @@ DROP TABLE student_db;
  WHERE Age > 20;
  
  
- 
+-- DCL COMMAND
+
+GRANT SELECT ON student TO USER 'vedant@localhost';
+REVOCKE SELECT ON student FROM USER 'vedant@localhost';
+
+
+-- TCL COMMAND
+
+BEGIN TRANSACTION;
+INSERT INTO student
+(studentID,Name,Age,Course,EnrollmentID)
+VALUES
+(3,"Charlie Brown",21,"Data Science","2025-01-07");
