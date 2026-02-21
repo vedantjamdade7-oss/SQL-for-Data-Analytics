@@ -37,3 +37,91 @@ TCL Commands are used to manage transactions in the database.
 TCL commands include:
 - COMMIT : used to save all changes made in the current transaction.
 - ROLLBACK : used to undo changes made in the current transaction.
+
+
+-- DDL COMMAND  
+
+CREATE SCHEMA student_DB;
+
+USE student_DB;
+
+CREATE TABLE student_1(
+StudentID INT PRIMARY KEY,
+Name VARCHAR(100) NOT NULL,
+Age INT,
+Course VARCHAR(50),
+EnrollmentID DATE
+);
+
+ALTER TABLE student_DB
+ADD EmailID VARCHAR(100) UNIQUE;
+
+ALTER TABLE student_DB
+MODIFY Age INT NOT NULL;
+
+ALTER TABLE student_DB
+DROP COLUMN EmailID;
+
+TRUNCATE TABLE student_DB;
+
+DROP TABLE student_DB;
+
+-- DML COMMAND
+
+USE student_DB;
+
+CREATE TABLE student_DB(
+CourseID VARCHAR(50) PRIMARY KEY,
+CourseName VARCHAR(100),
+DurationMonths INT 
+);
+
+INSERT INTO student_DB
+(CourseID,CourseName,DurationMonths)
+VALUES
+("c101","Data Science",06),
+("c102","UI/UX",07);
+
+
+CREATE TABLE student(
+StudentID INT PRIMARY KEY,
+Name VARCHAR(100) NOT NULL,
+Age INT,
+Course VARCHAR(50),
+EnrollmentID DATE
+);
+
+INSERT INTO student
+(StudentID,Name,Age,Course,EnrollmentID)
+VALUES
+(1,"Alice Johnson",20,"Data Science","2025-01-06"),
+(2,"Bob Smith",22,"Web Developmnet","2025-01-05");
+
+
+DROP TABLE student_db;
+ 
+ UPDATE student_1
+ SET Age=21
+ WHERE studentID=1;
+ 
+ 
+ UPDATE student
+ SET Course='UI/UX'
+ WHERE studentID=2;
+ 
+ DELETE FROM student_1
+ WHERE studentID=3;
+ 
+ -- DQL COMMAND
+
+ SELECT * FROM student;
+
+ SELECT * FROM student_db;
+  
+ SELECT Name , Course FROM student_1;
+ 
+ SELECT * FROM student_1
+ WHERE Age > 20;
+ 
+ 
+ 
