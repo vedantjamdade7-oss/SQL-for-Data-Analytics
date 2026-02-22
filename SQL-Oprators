@@ -1,0 +1,56 @@
+SQL Operators
+   Introduction
+
+SQL Operators are used to perform operations on data in a database.
+They are mainly used in the WHERE clause to filter records.
+
+-- 1️⃣ Arithmetic Operators
+Used to perform mathematical calculations.
+
+Operator	
+🔹+	Addition
+🔹-	Subtraction
+🔹*	Multiplication
+🔹/	Division
+🔹%	Modulus (Remainder)
+
+-- 2️⃣ Comparison Operators
+Used to compare two values.
+
+Operator	
+🔹= : Equal to
+🔹!= : Not equal to (<>)
+🔹> :	Greater than
+🔹< :	Less than
+🔹>= : Greater than or equal to
+🔹<= : Less than or equal to
+
+-- 3️⃣ Logical Operators
+Used to combine multiple conditions.
+
+🔹AND 
+ All conditions must be true
+
+🔹OR 
+ At least one condition must be true
+
+🔹NOT 
+ Reverses the condition.
+
+-- 4️⃣ Special Operators
+Used for specific conditions.
+
+
+🔹 BETWEEN
+Used to filter values within a range.
+
+🔹 IN
+Used to match multiple values.
+
+🔹 LIKE
+Used for pattern matching.
+
+🔹 IS NULL
+Used to check NULL values.
+
+
