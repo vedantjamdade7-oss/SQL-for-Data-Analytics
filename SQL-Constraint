@@ -1,0 +1,117 @@
+SQL Constraints
+   Introduction
+
+Constraints are rules enforced on table columns in a database.
+They help maintain data accuracy, consistency, and integrity.
+
+Using constraints ensures that only valid data is stored in the database.
+
+🔹 Types of SQL Constraints
+
+--1️⃣ UNIQUE Constraint
+
+The UNIQUE constraint ensures that all values in a column are distinct.
+
+Prevents duplicate values
+
+Allows NULL values (depending on the database system)
+
+Example:
+CREATE TABLE users (
+    email VARCHAR(100) UNIQUE
+);
+
+-- 2️⃣ NOT NULL Constraint
+
+The NOT NULL constraint ensures that a column cannot contain NULL values.
+
+Example:
+CREATE TABLE users (
+    name VARCHAR(100) NOT NULL
+);
+
+-- 3️⃣ PRIMARY KEY (PK)
+
+A Primary Key is a combination of:
+
+UNIQUE
+
+NOT NULL
+
+It uniquely identifies each row in a table.
+
+Key Points:
+
+A table can have only one Primary Key
+
+The Primary Key cannot contain NULL
+
+It ensures entity integrity
+
+Example:
+CREATE TABLE users (
+    user_id INT PRIMARY KEY
+);
+🔸 Composite Primary Key
+
+Sometimes a single column is not sufficient to uniquely identify records.
+In such cases, we combine two or more columns to create a Composite Primary Key.
+
+Example:
+CREATE TABLE enrollments (
+    student_id INT,
+    course_id INT,
+    PRIMARY KEY (student_id, course_id)
+);
+
+-- 4️⃣ FOREIGN KEY (FK)
+
+A Foreign Key is also known as a Referential Constraint.
+
+It establishes and enforces a relationship between two tables.
+
+It references the Primary Key of another table
+
+Ensures referential integrity
+
+Terminology:
+
+Parent Table → Table that contains the Primary Key
+
+Child Table → Table that contains the Foreign Key
+
+Key Points:
+
+A table can have only one Primary Key
+
+A table can have multiple Foreign Keys
+
+Primary Key does NOT allow NULL
+
+Foreign Key can allow NULL (if not restricted)
+
+You cannot insert a Foreign Key value that does not exist in the referenced table
+
+Example:
+CREATE TABLE orders (
+    order_id INT PRIMARY KEY,
+    user_id INT,
+    FOREIGN KEY (user_id) REFERENCES users(user_id)
+);
+-- 5️⃣ DEFAULT Constraint
+
+The DEFAULT constraint provides a default value for a column when no value is specified during an INSERT operation.
+
+Example:
+CREATE TABLE users (
+    status VARCHAR(20) DEFAULT 'active'
+);
+
+--6️⃣ CHECK Constraint
+
+The CHECK constraint ensures that values in a column satisfy a specific condition.
+
+Example:
+CREATE TABLE employees (
+    age INT CHECK (age >= 18)
+);
