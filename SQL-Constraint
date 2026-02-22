@@ -9,7 +9,6 @@ Using constraints ensures that only valid data is stored in the database.
 🔹 Types of SQL Constraints
 
 -- 1️⃣ UNIQUE Constraint
-
 The UNIQUE constraint ensures that all values in a column are distinct.
 
 Prevents duplicate values
@@ -22,7 +21,6 @@ CREATE TABLE users (
 );
 
 -- 2️⃣ NOT NULL Constraint
-
 The NOT NULL constraint ensures that a column cannot contain NULL values.
 
 Example:
@@ -52,8 +50,8 @@ Example:
 CREATE TABLE users (
     user_id INT PRIMARY KEY
 );
-🔸 Composite Primary Key
 
+🔸 Composite Primary Key
 Sometimes a single column is not sufficient to uniquely identify records.
 In such cases, we combine two or more columns to create a Composite Primary Key.
 
@@ -65,7 +63,6 @@ CREATE TABLE enrollments (
 );
 
 -- 4️⃣ FOREIGN KEY (FK)
-
 A Foreign Key is also known as a Referential Constraint.
 
 It establishes and enforces a relationship between two tables.
@@ -98,8 +95,8 @@ CREATE TABLE orders (
     user_id INT,
     FOREIGN KEY (user_id) REFERENCES users(user_id)
 );
--- 5️⃣ DEFAULT Constraint
 
+-- 5️⃣ DEFAULT Constraint
 The DEFAULT constraint provides a default value for a column when no value is specified during an INSERT operation.
 
 Example:
@@ -108,7 +105,6 @@ CREATE TABLE users (
 );
 
 -- 6️⃣ CHECK Constraint
-
 The CHECK constraint ensures that values in a column satisfy a specific condition.
 
 Example:
