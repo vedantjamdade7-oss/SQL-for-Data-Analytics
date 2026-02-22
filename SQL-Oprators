@@ -53,4 +53,25 @@ Used for pattern matching.
 🔹 IS NULL
 Used to check NULL values.
 
+USE market_star_schema;
+
+SELECT * FROM cust_dimen;
+SELECT * FROM manu;
+SELECT * FROM market_fact_full;
+SELECT * FROM orders_dimen;
+SELECT * FROM prod_dimen;
+SELECT * FROM shipping_dimen;
+
+SELECT 2-6;
+
+SELECT sales, order_quantity, 
+sales/order_quantity
+FROM market_fact_full;
+
+SELECT * FROM cust_dimen
+WHERE city='Chennai';
+
+-- customers who are not from chennai
+SELECT * FROM cust_dimen
+WHERE city<>'Chennai';
 
