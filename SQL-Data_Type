@@ -1,0 +1,35 @@
+SQL Data Types:
+
+1. Numerical Data Type : 
+This data type is used to store numeric values.
+-INT : used to store whole numbers (integers)
+-SMALLINT : used to store smaller Whole numbers 
+-BIGINT : used to store Lagre Whole numbers
+Ex: 10, -5, 1500
+
+Decimal: DECIMAL(p,s) --> p(precision) is the total no of digits, s (scale) is the no of digits after decimal point
+-FLOAT : used to store approximate value with single precision.
+-DOUBLE : used to store approximate value with double precision.
+Ex: 10.28, -5.25, 1500.47
+
+
+2. Strings (Character) Data Types:
+This data type is used to store text values. It can be of fixed Length or variable Length.
+-CHAR(size) : fixed length string
+-VARCHAR(size) : Variable length string
+-TEXT : used to store large text data (up to 65,535 characters)
+
+
+3. Date & Time Data Types: 
+This data type is used to store date and time values.
+-DATE: stores the date in 'YYYY-mm-DD' format (2026-01-10)
+-TIME: stores the time in 'HH:MM:SS' format (07:28:10)
+-DATETIME: stores the combination of DATE & TIME 'YYYY-mm-DD HH:MM:SS' (2026-01-10 07:29:30)
+-TIMESTAMP: similar to DATETIME but stores the time zone also (2026-01-10 07:29:30 IST)
+
+4. Binary Data Type: 
+Used to store binary values (0 and 1).
+-BLOB: Binary Large Object, used to store large binary data like images, videos, etc.
+
+5. Boolean Data Type: 
+Store TRUE or FALSE values. where TRUE is represented as 1 and FALSE is represented as 0.

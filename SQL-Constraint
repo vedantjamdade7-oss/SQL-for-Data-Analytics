@@ -8,7 +8,7 @@ Using constraints ensures that only valid data is stored in the database.
 
 🔹 Types of SQL Constraints
 
---1️⃣ UNIQUE Constraint
+-- 1️⃣ UNIQUE Constraint
 
 The UNIQUE constraint ensures that all values in a column are distinct.
 
@@ -107,7 +107,7 @@ CREATE TABLE users (
     status VARCHAR(20) DEFAULT 'active'
 );
 
---6️⃣ CHECK Constraint
+-- 6️⃣ CHECK Constraint
 
 The CHECK constraint ensures that values in a column satisfy a specific condition.
 
