@@ -90,3 +90,8 @@ SELECT * FROM cust_dimen
 WHERE city='Cochin'
 OR city='Hyderabad'
 OR city='Mumbai';
+
+-- get the details of customers who are from city of Mumbabi and customer segment of Home Office
+SELECT * FROM cust_dimen
+WHERE city='Mumbai'
+AND customer_segment='HOME OFFICE';
