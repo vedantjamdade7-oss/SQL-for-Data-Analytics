@@ -95,3 +95,7 @@ OR city='Mumbai';
 SELECT * FROM cust_dimen
 WHERE city='Mumbai'
 AND customer_segment='HOME OFFICE';
+
+-- get the details of customers who are not from city of Mumbai
+SELECT * FROM cust_dimen
+WHERE NOT city='Mumbai';
