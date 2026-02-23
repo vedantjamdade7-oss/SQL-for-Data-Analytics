@@ -103,3 +103,7 @@ WHERE NOT city='Mumbai';
 -- orders with sales between 100 and 1000
 SELECT * FROM market_fact_full
 WHERE sales>=100 AND sales<=1000;
+
+SELECT * FROM market_fact_full
+WHERE sales BETWEEN 100 AND 1000;
+
