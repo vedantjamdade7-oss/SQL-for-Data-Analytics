@@ -85,3 +85,8 @@ WHERE profit>0;
 SELECT * FROM orders_dimen
 WHERE order_date>='2012-01-01';
 
+-- get the details of customers who are either from city of Cochin, Hyderabad or Mumbai
+SELECT * FROM cust_dimen
+WHERE city='Cochin'
+OR city='Hyderabad'
+OR city='Mumbai';
