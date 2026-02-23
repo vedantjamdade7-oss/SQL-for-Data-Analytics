@@ -81,4 +81,7 @@ SELECT * FROM market_fact_full
 WHERE profit>0;
 
 
+-- orders placed on or after Jan 1st 2012
+SELECT * FROM orders_dimen
+WHERE order_date>='2012-01-01';
 
