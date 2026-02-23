@@ -99,3 +99,7 @@ AND customer_segment='HOME OFFICE';
 -- get the details of customers who are not from city of Mumbai
 SELECT * FROM cust_dimen
 WHERE NOT city='Mumbai';
+
+-- orders with sales between 100 and 1000
+SELECT * FROM market_fact_full
+WHERE sales>=100 AND sales<=1000;
