@@ -75,3 +75,10 @@ WHERE city='Chennai';
 SELECT * FROM cust_dimen
 WHERE city<>'Chennai';
 
+
+-- find the orders with profit greater than zero
+SELECT * FROM market_fact_full
+WHERE profit>0;
+
+
+
