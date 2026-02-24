@@ -115,3 +115,7 @@ WHERE order_date BETWEEN '2012-01-01' AND '2012-01-31';
 -- orders placed in year of 2010
 SELECT * FROM orders_dimen
 WHERE order_date BETWEEN '2010-01-01' AND '2010-12-31';
+
+-- get the rows with manu_id as NULL
+SELECT * FROM prod_dimen
+WHERE manu_id IS NULL;
