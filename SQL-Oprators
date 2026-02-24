@@ -127,4 +127,7 @@ WHERE manu_id IS NOT NULL;
 -- customers whose city name ending with "i"
 SELECT * FROM cust_dimen
 WHERE city LIKE '%i';
--- 
+
+-- customers whose city name starting with 'c'
+SELECT * FROM cust_dimen
+WHERE city LIKE 'c%';
