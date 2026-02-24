@@ -136,3 +136,9 @@ WHERE city LIKE 'c%';
 SELECT * FROM cust_dimen
 WHERE city LIKE '%b%';
 
+-- customer details who are either from cities of Mumbai, Delhi and Chennai
+SELECT * FROM cust_dimen
+WHERE city='Mumbai' OR city='Delhi' OR city='Chennai';
+
+SELECT * FROM cust_dimen
+WHERE city IN ('Mumbai','Delhi','Chennai');
