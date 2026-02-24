@@ -131,3 +131,8 @@ WHERE city LIKE '%i';
 -- customers whose city name starting with 'c'
 SELECT * FROM cust_dimen
 WHERE city LIKE 'c%';
+
+-- customers whose city name contains letter 'b'
+SELECT * FROM cust_dimen
+WHERE city LIKE '%b%';
+
