@@ -123,3 +123,8 @@ WHERE manu_id IS NULL;
 -- get the rows with manu_id is not a null
 SELECT * FROM prod_dimen
 WHERE manu_id IS NOT NULL;
+
+-- customers whose city name ending with "i"
+SELECT * FROM cust_dimen
+WHERE city LIKE '%i';
+-- 
