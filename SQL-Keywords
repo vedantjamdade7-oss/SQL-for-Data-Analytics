@@ -52,3 +52,10 @@ LIMIT is used to restrict the number of rows returned by a query.
 
 OFFSET is used to skip a specific number of rows before returning results.
 
+
+-- 6️⃣ WHERE 
+
+WHERE is used to filter records based on specified conditions.
+
+ It is used to extract only those records that fulfill a specified condition.
+
