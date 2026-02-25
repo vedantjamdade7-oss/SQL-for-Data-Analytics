@@ -3,20 +3,13 @@ SQL Keywords & Functions
 
 These SQL keywords and functions help in modifying query results, filtering data, and working with date values.
 
+
 -- 1️⃣ Aliasing (AS)
 
 Aliasing means giving an alternate (temporary) name to a column or table in the result.
 
 It improves readability of the output.
 
-Example:
-SELECT name AS employee_name
-FROM employees;
-
-You can also alias tables:
-
-SELECT e.name
-FROM employees AS e;
 
 -- 2️⃣ DISTINCT
 
@@ -24,9 +17,6 @@ DISTINCT is used to return only unique values from a column.
 
 It removes duplicate values.
 
-Example:
-SELECT DISTINCT department
-FROM employees;
 
 -- 3️⃣ ORDER BY
 
@@ -40,10 +30,6 @@ Arranges data from A to Z
 
 For numbers → smallest to largest
 
-Example:
-SELECT * FROM employees
-ORDER BY name ASC;
-
  Sorts employee names from A to Z.
 
   b) DESC (Descending Order)
@@ -52,10 +38,6 @@ Arranges data from Z to A
 
 For numbers → largest to smallest
 
-Example:
-SELECT * FROM employees
-ORDER BY salary DESC;
-
  Sorts salary from highest to lowest.
 
 
@@ -63,11 +45,8 @@ ORDER BY salary DESC;
 
 LIMIT is used to restrict the number of rows returned by a query.
 
-Example:
-SELECT * FROM employees
-LIMIT 5;
+ Returns only first 5 rows.
 
-# Returns only first 5 rows.
 
 -- 5️⃣ OFFSET
 
