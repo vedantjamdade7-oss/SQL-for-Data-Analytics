@@ -73,6 +73,3 @@ LIMIT 5;
 
 OFFSET is used to skip a specific number of rows before returning results.
 
-Example:
-SELECT * FROM employees
-LIMIT 5 OFFSET 10;
