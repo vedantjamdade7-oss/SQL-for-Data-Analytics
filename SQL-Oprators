@@ -53,6 +53,10 @@ Used for pattern matching.
 🔹 IS NULL
 Used to check NULL values.
 
+🔹 IS NOT NULL
+Used to check for non-Null values.
+
+
 USE market_star_schema;
 
 SELECT * FROM cust_dimen;
