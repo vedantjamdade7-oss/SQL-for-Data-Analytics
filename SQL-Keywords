@@ -59,3 +59,12 @@ WHERE is used to filter records based on specified conditions.
 
  It is used to extract only those records that fulfill a specified condition.
 
+
+-- 7️⃣ GROUP BY
+
+GROUP BY is used to group rows that have the same values in specified columns into summary rows.
+
+
+-- 8️⃣ HAVING
+
+HAVING is used to filter groups based on a specified condition.
