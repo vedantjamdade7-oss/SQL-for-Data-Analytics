@@ -81,3 +81,7 @@ ORDER BY city ASC;
 
 SELECT * FROM orders_dimen
 ORDER BY order_date ASC;
+
+SELECT * FROM market_fact_full
+ORDER BY cust_id ASC, sales DESC;
+
