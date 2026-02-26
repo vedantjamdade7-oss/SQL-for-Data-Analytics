@@ -99,3 +99,8 @@ LIMIT 1 OFFSET 1;
 SELECT * FROM market_fact_full
 ORDER BY sales
 LIMIT 5;
+
+-- find the fourth lowest profit value
+SELECT * FROM market_fact_full
+ORDER BY profit
+LIMIT 1 OFFSET 3;
