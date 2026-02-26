@@ -89,3 +89,8 @@ ORDER BY cust_id ASC, sales DESC;
 SELECT * FROM market_fact_full
 ORDER BY sales DESC
 LIMIT 1;
+
+-- find the order with second highest sales amount
+SELECT * FROM market_fact_full
+ORDER BY sales DESC
+LIMIT 1 OFFSET 1;
