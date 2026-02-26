@@ -68,3 +68,8 @@ GROUP BY is used to group rows that have the same values in specified columns in
 -- 8️⃣ HAVING
 
 HAVING is used to filter groups based on a specified condition.
+
+EXAMPLE:-
+
+USE market_star_schema;
+
