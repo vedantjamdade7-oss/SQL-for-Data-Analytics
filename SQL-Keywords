@@ -85,3 +85,7 @@ ORDER BY order_date ASC;
 SELECT * FROM market_fact_full
 ORDER BY cust_id ASC, sales DESC;
 
+-- find the highest sales amount order
+SELECT * FROM market_fact_full
+ORDER BY sales DESC
+LIMIT 1;
