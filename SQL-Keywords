@@ -104,3 +104,9 @@ LIMIT 5;
 SELECT * FROM market_fact_full
 ORDER BY profit
 LIMIT 1 OFFSET 3;
+
+-- find the fourth highest sales value among the orders which has positive profit value
+SELECT * FROM market_fact_full
+WHERE profit>0
+ORDER BY sales DESC
+LIMIT 1 OFFSET 3;
