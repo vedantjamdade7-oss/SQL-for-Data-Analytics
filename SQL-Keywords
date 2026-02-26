@@ -73,3 +73,5 @@ EXAMPLE:-
 
 USE market_star_schema;
 
+SELECT * FROM market_fact_full
+ORDER BY sales;
