@@ -94,3 +94,8 @@ LIMIT 1;
 SELECT * FROM market_fact_full
 ORDER BY sales DESC
 LIMIT 1 OFFSET 1;
+
+-- find the five lowest amount sales orders
+SELECT * FROM market_fact_full
+ORDER BY sales
+LIMIT 5;
