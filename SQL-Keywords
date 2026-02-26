@@ -78,3 +78,6 @@ ORDER BY sales;
 
 SELECT * FROM cust_dimen
 ORDER BY city ASC;
+
+SELECT * FROM orders_dimen
+ORDER BY order_date ASC;
