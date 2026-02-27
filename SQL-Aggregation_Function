@@ -1,0 +1,14 @@
+Aggregation Functions in SQL
+
+Aggregation functions are used to summarize data from multiple rows into a single value.
+
+They are very important for:
+
+📊 Data analysis
+📈 Dashboards
+📉 Business reporting
+💼 Data analyst interviews
+
+1️⃣ COUNT() – Counts Rows
+The count() function counts the number of rows that match a specified condition.
+
