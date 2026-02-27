@@ -12,3 +12,6 @@ They are very important for:
 1️⃣ COUNT() – Counts Rows
 The count() function counts the number of rows that match a specified condition.
 
+2️⃣ SUM() – Adds Values
+The sum() function calculates the total sum of a numeric column.
+
