@@ -15,3 +15,6 @@ The count() function counts the number of rows that match a specified condition.
 2️⃣ SUM() – Adds Values
 The sum() function calculates the total sum of a numeric column.
 
+3️⃣ AVG() – Average Value
+The avg() function calculates the average value of a numeric column.
+
