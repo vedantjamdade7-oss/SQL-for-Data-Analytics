@@ -40,3 +40,7 @@ FROM market_fact_full;
 -- how many null values are present in the manu_id column
 SELECT COUNT(*) - COUNT(manu_id) -- this line counts the total number of rows & subtracts the count of non-null manu_id values.
 FROM prod_dimen;
+
+-- no of customers from city of Cochin
+SELECT COUNT(cust_id) FROM cust_dimen
+WHERE city='Cochin';
