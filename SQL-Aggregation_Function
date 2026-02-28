@@ -38,9 +38,5 @@ MIN(sales) AS min_sales
 FROM market_fact_full;
 
 -- how many null values are present in the manu_id column
-SELECT COUNT(*) AS null_manu_id_count
-FROM market_fact_full
-WHERE manu_id IS NULL;
-
-SELECT COUNT(*) - COUNT(manu_id)
+SELECT COUNT(*) - COUNT(manu_id) -- this line counts the total number of rows & subtracts the count of non-null manu_id values.
 FROM prod_dimen;
