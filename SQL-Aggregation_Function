@@ -9,21 +9,38 @@ They are very important for:
 📉 Business reporting
 💼 Data analyst interviews
 
-1️⃣ COUNT() Counts Rows
+1️⃣ COUNT() : Counts Rows
 The count() function counts the number of rows that match a specified condition.
 
-2️⃣ SUM()  Adds Values
+2️⃣ SUM() : Adds Values
 The sum() function calculates the total sum of a numeric column.
 
-3️⃣ AVG()  Average Value
+3️⃣ AVG() : Average Value
 The avg() function calculates the average value of a numeric column.
 
-4️⃣ MIN()  Smallest Value
+4️⃣ MIN() : Smallest Value
 The min() function returns the smallest value in a specified column.
-
-5️⃣ MAX() Largest Value
+ 
+5️⃣ MAX() : Largest Value
 The max() function returns the largest value in a specified column.
+
 
 EXAMPLE:
 
 USE market_star_schema;
+
+SELECT
+COUNT(market_fact_id) AS no_of_sales,
+SUM(sales) AS total_sales,
+AVG(sales) AS avg_sales,
+MAX(sales) AS max_sales,
+MIN(sales) AS min_sales
+FROM market_fact_full;
+
+-- how many null values are present in the manu_id column
+SELECT COUNT(*) AS null_manu_id_count
+FROM market_fact_full
+WHERE manu_id IS NULL;
+
+SELECT COUNT(*) - COUNT(manu_id)
+FROM prod_dimen;
