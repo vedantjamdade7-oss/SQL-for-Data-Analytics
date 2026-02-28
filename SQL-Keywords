@@ -69,6 +69,7 @@ GROUP BY is used to group rows that have the same values in specified columns in
 
 HAVING is used to filter groups based on a specified condition.
 
+
 EXAMPLE:-
 
 USE market_star_schema;
@@ -110,3 +111,9 @@ SELECT * FROM market_fact_full
 WHERE profit>0
 ORDER BY sales DESC
 LIMIT 1 OFFSET 3;
+
+-- how many distinct cities are present
+SELECT COUNT(DISTINCT city) FROM cust_dimen;
+
+-- find the distinct cities.
+SELECT DISTINCT city FROM cust_dimen;
