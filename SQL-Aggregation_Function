@@ -48,3 +48,12 @@ WHERE city='Cochin';
 -- no of orders are placed in year of 2010
 SELECT COUNT(ord_id) AS no_of_orders FROM orders_dimen
 WHERE order_date BETWEEN '2010-01-01' AND '2010-12-31';
+
+-- no of orders are placed in year of March 2010 with critical as order priority
+SELECT COUNT(ord_id) AS no_of_orders FROM orders_dimen
+WHERE (order_date BETWEEN '2010-03-01' AND '2010-03-31')
+AND order_priority='Critical';
+
+-- no of customers either from city of Chennai or Hyderabad
+SELECT COUNT(cust_id) AS no_of_customers FROM cust_dimen
+WHERE city IN ('Chennai','Hyderabad');
