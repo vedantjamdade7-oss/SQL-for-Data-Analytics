@@ -44,3 +44,7 @@ FROM prod_dimen;
 -- no of customers from city of Cochin
 SELECT COUNT(cust_id) FROM cust_dimen
 WHERE city='Cochin';
+
+-- no of orders are placed in year of 2010
+SELECT COUNT(ord_id) AS no_of_orders FROM orders_dimen
+WHERE order_date BETWEEN '2010-01-01' AND '2010-12-31';
