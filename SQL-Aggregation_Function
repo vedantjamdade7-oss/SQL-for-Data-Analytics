@@ -64,3 +64,11 @@ FROM cust_dimen
 GROUP BY city
 ORDER BY no_of_cust DESC
 LIMIT 1;
+
+-- find third highest customer segment in cities of Chennai or Delhi with more no of customers
+SELECT customer_segment, COUNT(*) AS no_of_customers 
+FROM cust_dimen
+WHERE city IN ('Chennai','Delhi')
+GROUP BY customer_segment
+ORDER BY no_of_customers DESC
+LIMIT 1 OFFSET 2;
