@@ -81,3 +81,9 @@ FROM market_fact_full;
 SELECT MAX(profit) AS max_profit
 FROM market_fact_full
 WHERE sales>1000;
+
+-- find the minimum sales value among the orders which has profit value more than 500
+SELECT MIN(sales) AS min_sales
+FROM market_fact_full
+WHERE profit>500;
+
