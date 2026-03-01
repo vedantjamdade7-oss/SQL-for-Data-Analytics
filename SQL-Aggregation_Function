@@ -24,6 +24,8 @@ The min() function returns the smallest value in a specified column.
 5️⃣ MAX() : Largest Value
 The max() function returns the largest value in a specified column.
 
+NOTE: ROUND() function is used to round a numeric value to a specified number of decimal places. It is not an aggreaction fuction
+but is often used with aggregation functions to format the output.
 
 EXAMPLE:
 
