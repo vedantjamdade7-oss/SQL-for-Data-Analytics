@@ -72,3 +72,12 @@ WHERE city IN ('Chennai','Delhi')
 GROUP BY customer_segment
 ORDER BY no_of_customers DESC
 LIMIT 1 OFFSET 2;
+
+-- find the sum of sales 
+SELECT SUM(sales) AS total_sales
+FROM market_fact_full;
+
+-- find the maximum profit value among the orders which has sales value more than 1000
+SELECT MAX(profit) AS max_profit
+FROM market_fact_full
+WHERE sales>1000;
