@@ -76,20 +76,20 @@ ORDER BY no_of_customers DESC
 LIMIT 1 OFFSET 2;
 
 -- find the sum of sales 
-SELECT SUM(sales) AS total_sales
+SELECT ROUND(SUM(sales),2) AS total_sales
 FROM market_fact_full;
 
 -- find the maximum profit value among the orders which has sales value more than 1000
-SELECT MAX(profit) AS max_profit
+SELECT ROUND(MAX(profit),2) AS max_profit
 FROM market_fact_full
 WHERE sales>1000;
 
 -- find the minimum sales value among the orders which has profit value more than 500
-SELECT MIN(sales) AS min_sales
+SELECT ROUND(MIN(sales),2) AS min_sales
 FROM market_fact_full
 WHERE profit>500;
 
 -- find the average profit value among the orders which has sales value more than 500 and profit value less thn 1000
-SELECT AVG(profit) AS avg_profit
+SELECT ROUND(AVG(profit),2) AS avg_profit
 FROM market_fact_full
 WHERE sales>500 AND profit<1000;
