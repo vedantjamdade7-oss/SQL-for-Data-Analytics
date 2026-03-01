@@ -57,3 +57,10 @@ AND order_priority='Critical';
 -- no of customers either from city of Chennai or Hyderabad
 SELECT COUNT(cust_id) AS no_of_customers FROM cust_dimen
 WHERE city IN ('Chennai','Hyderabad');
+
+-- find the city with highest no of customers
+SELECT city, COUNT(*) AS no_of_cust 
+FROM cust_dimen
+GROUP BY city
+ORDER BY no_of_cust DESC
+LIMIT 1;
