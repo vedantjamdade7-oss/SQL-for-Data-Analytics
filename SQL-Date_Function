@@ -4,10 +4,28 @@ Date Functions in SQL
 Extracts the year from a date value.
 
 SELECT YEAR(order_date) 
-FROM market_fact_full;
+FROM orders_dimen;
 
 2️⃣ MONTH()
 Extracts the month (1–12) from a date value.
 
 SELECT MONTH(order_date) 
-FROM market_fact_full;
+FROM orders_dimen;
+
+3️⃣ DAY()
+Extracts the day (1–31) from a date value.
+
+SELECT DAY(order_date) 
+FROM orders_dimen;
+
+EXAMPLE:
+
+-- find the total sales for each month and year of the orders.
+SELECT 
+    YEAR(order_date) AS year,
+    MONTH(order_date) AS month,
+    SUM(sales) AS total_sales
+FROM market_fact_full mff
+JOIN orders_dimen od ON mff.ord_id = od.ord_id
+GROUP BY YEAR(order_date), MONTH(order_date)
+ORDER BY year, month;
