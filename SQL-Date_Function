@@ -33,3 +33,8 @@ ORDER BY year, month;
 -- orders details for the orders which were placed in 2010
 SELECT * FROM orders_dimen
 WHERE YEAR(order_date)='2010';
+
+-- no of orders are placed in year of March 2010
+SELECT * FROM orders_dimen
+WHERE YEAR(order_date)='2010'
+AND MONTH(order_date)='03';
