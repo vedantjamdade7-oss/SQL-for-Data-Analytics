@@ -1,5 +1,8 @@
 Date Functions in SQL
 
+Date functions are used to manipulate and extract information from Date, Month, And Year values in SQL
+
+
 1️⃣ YEAR()
 Extracts the year from a date value.
 
