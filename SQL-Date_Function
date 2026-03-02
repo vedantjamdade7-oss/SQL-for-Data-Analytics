@@ -38,3 +38,8 @@ WHERE YEAR(order_date)='2010';
 SELECT * FROM orders_dimen
 WHERE YEAR(order_date)='2010'
 AND MONTH(order_date)='03';
+
+-- order details of the orders which are placed in Jan, Mar, Oct of 2010
+SELECT * FROM orders_dimen
+WHERE YEAR(order_date)='2010'
+AND MONTH(order_date) IN ('01','03','10');
