@@ -3,3 +3,11 @@ Date Functions in SQL
 1️⃣ YEAR()
 Extracts the year from a date value.
 
+SELECT YEAR(order_date) 
+FROM market_fact_full;
+
+2️⃣ MONTH()
+Extracts the month (1–12) from a date value.
+
+SELECT MONTH(order_date) 
+FROM market_fact_full;
