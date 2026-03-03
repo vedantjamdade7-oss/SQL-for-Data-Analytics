@@ -5,13 +5,18 @@ Joins are used to combine data from multiple tables based on a related column.
 TYPE OF JOINS
 
 1️⃣ INNER JOIN
-Returns only matching rows from both tables.
+🔹Returns only matching rows from both tables.
 
 2️⃣ LEFT JOIN (LEFT OUTER JOIN)
-All rows from the left table
-Matching rows from the right table
-NULL if no match
+🔹All rows from the left table
+🔹Matching rows from the right table
+🔹NULL if no match
 
 3️⃣ RIGHT JOIN (RIGHT OUTER JOIN)
-All rows from the right table
-Matching rows from the left table
+🔹All rows from the right table
+🔹Matching rows from the left table
+
+4️⃣ FULL JOIN (FULL OUTER JOIN)
+🔹All rows from both tables
+🔹NULL where there is no match
+
