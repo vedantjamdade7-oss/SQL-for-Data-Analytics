@@ -20,3 +20,7 @@ TYPE OF JOINS
 🔹All rows from both tables
 🔹NULL where there is no match
 
+EXAMPLE:
+
+USE market_star_schema;
+
