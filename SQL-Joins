@@ -33,3 +33,8 @@ ON cd.cust_id=mff.cust_id;
 SELECT * FROM 
 cust_dimen cd LEFT JOIN market_fact_full mff
 ON cd.cust_id=mff.cust_id;
+
+-- RIGHT JOIN
+SELECT * FROM 
+cust_dimen cd RIGHT JOIN market_fact_full mff
+ON cd.cust_id=mff.cust_id;
