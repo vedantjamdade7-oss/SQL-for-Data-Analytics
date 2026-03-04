@@ -43,3 +43,4 @@ ON cd.cust_id=mff.cust_id;
 SELECT * FROM cust_dimen cd
 JOIN market_fact_full mff
 USING (cust_id);
+
