@@ -24,3 +24,8 @@ EXAMPLE:
 
 USE market_star_schema;
 
+-- INNER JOIN
+SELECT * FROM cust_dimen cd
+INNER JOIN market_fact_full mff
+ON cd.cust_id=mff.cust_id;
+
