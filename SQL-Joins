@@ -55,3 +55,10 @@ JOIN shipping_dimen sd
 ON sd.ship_id=mff.ship_id
 JOIN prod_dimen pd
 ON pd.prod_id=mff.prod_id;
+
+-- find the sum of sales from each city
+SELECT city, ROUND(SUM(sales),2) AS total_sales  FROM 
+cust_dimen cd JOIN market_fact_full mff
+ON cd.cust_id=mff.cust_id
+GROUP BY city
+ORDER BY total_sales DESC;
