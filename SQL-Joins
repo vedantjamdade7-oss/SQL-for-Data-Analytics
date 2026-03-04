@@ -44,3 +44,14 @@ SELECT * FROM cust_dimen cd
 JOIN market_fact_full mff
 USING (cust_id);
 
+
+-- Multiple Joins
+SELECT * FROM cust_dimen cd
+JOIN market_fact_full mff
+ON cd.cust_id=mff.cust_id
+JOIN orders_dimen od 
+ON mff.ord_id=od.ord_id
+JOIN shipping_dimen sd
+ON sd.ship_id=mff.ship_id
+JOIN prod_dimen pd
+ON pd.prod_id=mff.prod_id;
