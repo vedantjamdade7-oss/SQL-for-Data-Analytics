@@ -1,0 +1,37 @@
+Subqueries in SQL
+
+🔹A subquery (also called an inner query) is a query that is nested inside another SQL query.
+
+🔹The inner query is called the subquery.
+
+🔹The outer query is called the main query.
+
+
+Types of Subqueries:
+
+1️⃣ Scalar Subquery
+- Returns a single value.
+
+- One row
+
+- One column
+
+🔹 The subquery returns one value (average sales).
+
+
+2️⃣ Multiple Row Subquery
+Returns multiple rows but only one column.
+
+🔹 The subquery returns multiple customer IDs.
+
+
+3️⃣ Multiple Column Subquery
+Returns multiple columns and multiple rows.
+
+🔹 The subquery returns more than one column.
+
+Important Rules:
+
+✔ Subqueries are written inside parentheses ( )
+✔ The subquery executes first
+✔ The outer query uses the result of the subquery
