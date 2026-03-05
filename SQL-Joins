@@ -71,3 +71,19 @@ JOIN orders_dimen od
 ON mff.ord_id=od.ord_id
 WHERE YEAR(order_date) IN ('2011','2012')
 GROUP BY city;
+
+/* find the total sales for each city in which the orders placed in years of 2011 and 2012
+and has regular air as ship mode and office supplies as product category */
+SELECT city, SUM(sales) AS total_sales  FROM cust_dimen cd
+JOIN market_fact_full mff
+ON cd.cust_id=mff.cust_id
+JOIN orders_dimen od 
+ON mff.ord_id=od.ord_id
+JOIN shipping_dimen sd
+ON sd.ship_id=mff.ship_id
+JOIN prod_dimen pd
+ON pd.prod_id=mff.prod_id
+WHERE YEAR(order_date) IN ('2011','2012')
+AND ship_mode='Regular Air'
+AND product_category='OFFICE SUPPLIES'
+GROUP BY city;
