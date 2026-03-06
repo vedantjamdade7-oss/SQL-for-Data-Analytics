@@ -40,3 +40,6 @@ EXAMPLE:-
 
 USE market_star_schema;
 
+-- find the sales which are above the avg sales
+SELECT * FROM market_fact_full
+WHERE sales>(SELECT AVG(sales) FROM market_fact_full);
