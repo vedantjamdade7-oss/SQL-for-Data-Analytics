@@ -43,3 +43,9 @@ USE market_star_schema;
 -- find the sales which are above the avg sales
 SELECT * FROM market_fact_full
 WHERE sales>(SELECT AVG(sales) FROM market_fact_full);
+
+-- find the product with highest product base margin
+SELECT pd.prod_id, product_base_margin, product_category
+FROM market_fact_full mff
+JOIN prod_dimen pd ON mff.prod_id=pd.prod_id
+WHERE product_base_margin = (SELECT MAX(product_base_margin) FROM market_fact_full);
