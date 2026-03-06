@@ -35,3 +35,8 @@ Important Rules:
 ✔ Subqueries are written inside parentheses ( )
 ✔ The subquery executes first
 ✔ The outer query uses the result of the subquery
+
+EXAMPLE:-
+
+USE market_star_schema;
+
