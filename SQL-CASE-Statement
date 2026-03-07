@@ -23,3 +23,18 @@ Explanation:
 🔹ELSE → value returned if no conditions match
 
 🔹END → closes the CASE statement
+
+EXAMPLE:
+
+USE market_star_schema;
+
+-- classify sales as "Loss", "Profit", or "Neither Profit nor Loss"
+SELECT profit, 
+CASE 
+	WHEN profit<0 THEN "Loss"
+    WHEN profit>0 THEN "Profit"
+    ELSE "Neither Profit nor Loss"
+END AS profit_description
+FROM market_fact_full
+HAVING profit_description="Loss";
+
