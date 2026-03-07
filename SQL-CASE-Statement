@@ -1,0 +1,25 @@
+CASE Statement in SQL
+
+The CASE statement is used to apply conditional logic in SQL, similar to if–else statements in programming.
+
+It allows you to create new values based on conditions.
+
+# Basic Syntax
+SELECT 
+    column_name,
+    CASE 
+        WHEN condition1 THEN result1
+        WHEN condition2 THEN result2
+        ELSE result3
+    END AS new_column
+FROM table_name;
+
+Explanation:
+
+🔹WHEN → condition to check
+
+🔹THEN → value returned if condition is true
+
+🔹ELSE → value returned if no conditions match
+
+🔹END → closes the CASE statement
