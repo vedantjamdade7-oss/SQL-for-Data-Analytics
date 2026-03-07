@@ -29,6 +29,7 @@ EXAMPLE:
 USE market_star_schema;
 
 -- classify sales as "Loss", "Profit", or "Neither Profit nor Loss"
+
 SELECT profit, 
 CASE 
 	WHEN profit<0 THEN "Loss"
@@ -38,3 +39,15 @@ END AS profit_description
 FROM market_fact_full
 HAVING profit_description="Loss";
 
+/* discount: (0 to 0.01: Very Less discount), (0.02 to 0.05: Less discount), 
+(0.06 to 0.1: Good Discount), (>0.1: Heavy Discount), No discount */
+
+SELECT discount, 
+CASE
+	WHEN discount>0 AND discount<=0.01 THEN "Very Less discount"
+    WHEN discount BETWEEN 0.02 AND 0.05 THEN "Less discount"
+    WHEN discount BETWEEN 0.06 AND 0.1 THEN "Good discount"
+    WHEN discount>0.1 THEN "Heavy discount"
+    ELSE "No discount"
+END AS discount_description
+FROM market_fact_full;
