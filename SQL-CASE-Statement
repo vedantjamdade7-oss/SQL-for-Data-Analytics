@@ -24,6 +24,37 @@ Explanation:
 
 🔹END → closes the CASE statement
 
+# Types of CASE
+
+1️⃣ Simple CASE
+
+SELECT 
+    cust_id, 
+    CASE city
+        WHEN 'mumbai' THEN 'Zone 1'
+        WHEN 'Chennai' THEN 'Zone 2'
+        ELSE 'Other Zone'
+    END AS ZONE
+FROM cust_dimen;
+
+2️⃣ Searched CASE (More Common)
+
+SELECT 
+    sales,
+    CASE
+        WHEN sales > 1000 THEN 'High'
+        ELSE 'Low'
+    END
+FROM market_fact_full;
+
+# Key Points
+
+🔹Used in SELECT, WHERE, ORDER BY, GROUP BY
+
+🔹Helps in data classification
+
+🔹Very common in reporting and dashboards
+
 EXAMPLE:
 
 USE market_star_schema;
