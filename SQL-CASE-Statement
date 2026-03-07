@@ -51,3 +51,19 @@ CASE
     ELSE "No discount"
 END AS discount_description
 FROM market_fact_full;
+
+/* calculate avg_profit for each product sub category and create a column called as 
+avg_profit_desciption avg_profit: (<=0: Loss, (1-100): Less profit, (101-500): Good Profit
+(>500: Heavy Profit)). Get the rows with avg_profit_description as Loss. */
+
+SELECT product_sub_category, AVG(profit) AS avg_profit,
+CASE
+	WHEN AVG(profit)<=0 THEN "Loss"
+    WHEN AVG(profit) BETWEEN 1 AND 100 THEN "Less Profit"
+    WHEN AVG(profit) BETWEEN 101 AND 500 THEN "Good Profit"
+    ELSE "Heavy Profit"
+END AS avg_profit_desciption
+FROM market_fact_full mff
+JOIN prod_dimen pd ON mff.prod_id=pd.prod_id
+GROUP BY product_sub_category
+HAVING avg_profit_desciption="Loss";
