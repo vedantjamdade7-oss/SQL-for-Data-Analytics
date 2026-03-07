@@ -52,7 +52,7 @@ WHERE product_base_margin = (SELECT MAX(product_base_margin) FROM market_fact_fu
 
 -- find the sales transactions that were not made from Mumbai or Delhi
 SELECT * FROM market_fact_full
-WHERE cust_id NOT IN (
-SELECT cust_id FROM cust_dimen
+WHERE cust_id NOT IN 
+(SELECT cust_id FROM cust_dimen
 WHERE city IN ('Mumbai','Delhi'));
 
