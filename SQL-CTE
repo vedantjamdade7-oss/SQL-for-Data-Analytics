@@ -36,6 +36,21 @@ WITH sales AS (
 )
 SELECT * FROM sales;
 
+-- find customers with total sales greater than 5000 using CTE  
+-- Hint : we have to used two CTEs in this query, One for calculating total sales for each customer and another for filtering customers with total sales greater then 5000.
+
+WITH sales_summary AS (
+    SELECT cust_id, SUM(sales) AS total_sales
+    FROM market_fact_full
+    GROUP BY cust_id
+),
+top_customers AS (
+    SELECT cust_id, total_sales
+    FROM sales_summary
+    WHERE total_sales > 5000
+)
+SELECT *
+FROM top_customers;
 
 -- classify sales as "Loss", "Profit", or "Neither Profit nor Loss" using CTE
 WITH profit_summary AS (
