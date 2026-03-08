@@ -37,6 +37,7 @@ WITH sales AS (
 SELECT * FROM sales;
 
 
+-- classify sales as "Loss", "Profit", or "Neither Profit nor Loss" using CTE
 WITH profit_summary AS (
 SELECT profit, 
 CASE 
