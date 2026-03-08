@@ -35,3 +35,15 @@ WITH sales AS (
     GROUP BY prod_id
 )
 SELECT * FROM sales;
+
+
+WITH profit_summary AS (
+SELECT profit, 
+CASE 
+	WHEN profit<0 THEN "Loss"
+    WHEN profit>0 THEN "Profit"
+    ELSE "Neither Profit nor Loss"
+END AS profit_description
+FROM market_fact_full)
+SELECT * FROM profit_summary
+WHERE profit_description="Loss";
