@@ -48,3 +48,23 @@ END AS profit_description
 FROM market_fact_full)
 SELECT * FROM profit_summary
 WHERE profit_description="Loss";
+
+-- /* calculate avg_profit for each product sub category and create a column called as 
+avg_profit_desciption avg_profit: (<=0: Loss, (1-100): Less profit, (101-500): Good Profit 
+(>500: Heavy Profit)). Get the rows with avg_profit_description as Loss. with CTE ("We can use more than one CTE in a query") */
+
+WITH profit_summary AS (
+SELECT product_sub_category, AVG(profit) AS avg_profit
+FROM market_fact_full mff
+JOIN prod_dimen pd ON mff.prod_id=pd.prod_id
+GROUP BY product_sub_category),avg_profit_desc_summary AS (
+SELECT *, 
+CASE
+	WHEN avg_profit<=0 THEN "Loss"
+    WHEN avg_profit BETWEEN 1 AND 100 THEN "Less Profit"
+    WHEN avg_profit BETWEEN 101 AND 500 THEN "Good Profit"
+    ELSE "Heavy Profit"
+END AS avg_profit_desciption
+FROM profit_summary)
+SELECT * FROM avg_profit_desc_summary
+WHERE avg_profit_desciption="Loss";
