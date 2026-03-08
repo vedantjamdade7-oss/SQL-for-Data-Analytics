@@ -1,0 +1,26 @@
+CTE (Common Table Expression) in SQL
+
+A CTE (Common Table Expression) is a temporary result set that you define within a query using the WITH keyword.
+
+It helps make complex queries easier to read and organize.
+
+# BASIC SYNTAX:
+
+WITH cte_name AS (
+    SELECT column1, column2
+    FROM table_name
+)
+SELECT *
+FROM cte_name;
+
+Explanation:
+
+🔹WITH → defines the CTE
+
+🔹cte_name → temporary table name
+
+🔹The query inside parentheses creates the temporary result set
+
+🔹The main query uses that result
+
+
