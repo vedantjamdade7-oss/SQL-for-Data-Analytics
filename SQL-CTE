@@ -23,4 +23,15 @@ Explanation:
 
 🔹The main query uses that result
 
+EXAMPLE:
 
+USE market_star_schema;
+
+-- find total sales for each product using CTE
+WITH sales AS (
+    SELECT mff.prod_id, SUM(sales) AS total_sales
+    FROM prod_dimen pd
+    JOIN market_fact_full mff ON pd.prod_id=mff.prod_id
+    GROUP BY prod_id
+)
+SELECT * FROM sales;
