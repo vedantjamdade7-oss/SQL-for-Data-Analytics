@@ -1,0 +1,138 @@
+Window Functions in SQL
+
+Window Functions are advanced SQL functions used to perform calculations across a set of rows related to the current row without grouping the result.
+
+Unlike GROUP BY, they do not collapse rows. Every row remains visible.
+
+Basic Syntax:
+
+SELECT column_name,
+       window_function() OVER (PARTITION BY column ORDER BY column)
+FROM table_name;
+Parts of Window Function
+Part	Meaning
+window_function()	Function like ROW_NUMBER(), RANK()
+OVER()	Defines the window
+PARTITION BY	Divides data into groups
+ORDER BY	Defines order inside the group
+
+1️⃣ ROW_NUMBER()
+
+Assigns a unique number to each row.
+
+Example:
+
+SELECT transactions_id,
+ROW_NUMBER() OVER(ORDER BY transactions_id) AS row_num
+FROM retail_sales;
+
+Example result:
+
+transactions_id	row_num
+1	               1
+2	               2
+3	               3
+5	               4
+
+2️⃣ RANK()
+
+Gives ranking but skips numbers when there is a tie.
+
+SELECT total_sale,
+RANK() OVER(ORDER BY total_sale DESC) AS rank_num
+FROM retail_sales;
+
+Example:
+
+total_sale	rank
+1000	     1
+900	         2
+900	         2
+800	         4
+
+3️⃣ DENSE_RANK()
+
+Similar to RANK() but does not skip numbers.
+
+SELECT total_sale,
+DENSE_RANK() OVER(ORDER BY total_sale DESC) AS rank_num
+FROM retail_sales;
+
+Example:
+
+total_sale	rank
+1000	     1
+900	         2
+900	         2
+800          3
+
+4️⃣ LEAD()
+
+Gets the next row value.
+
+SELECT transactions_id,
+LEAD(transactions_id) OVER(ORDER BY transactions_id) AS next_id
+FROM retail_sales;
+
+Example:
+
+transactions_id	 next_id
+1	               2
+2	               3
+3	               5
+
+Here we can see 4 is missing.
+
+5️⃣ LAG()
+
+Gets the previous row value.
+
+SELECT transactions_id,
+LAG(transactions_id) OVER(ORDER BY transactions_id) AS previous_id
+FROM retail_sales;
+
+Example:
+
+transactions_id	 previous_id
+2	               1
+3	               2
+5	               3
+
+⭐ Example: Finding Missing IDs Using LEAD()
+SELECT transactions_id,
+LEAD(transactions_id) OVER(ORDER BY transactions_id) AS next_id
+FROM retail_sales;
+
+Then check:
+
+next_id - transactions_id > 1
+
+This shows gaps in transaction IDs.
+
+# Why Window Functions Are Important
+
+🔹They are heavily used in:
+
+🔹Data Analysis
+
+🔹Financial reports
+
+🔹Ranking customers
+
+🔹Running totals
+
+🔹Detecting missing data
+
+🔹Time series analysis
+
+✅ Since we are learning SQL for Data Analyst roles, the 5 most important window functions to master are:
+
+ROW_NUMBER()
+
+RANK()
+
+DENSE_RANK()
+
+LEAD()
+
+LAG()
