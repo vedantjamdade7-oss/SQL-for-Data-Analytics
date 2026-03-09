@@ -143,3 +143,12 @@ LEAD()
 
 LAG()
 
+EXAMPLE:
+
+USE market_star_schema;
+
+-- find the avg sales for each city using window functions
+SELECT city, ROUND(sales,2) AS sales,
+AVG(sales) OVER(PARTITION BY city ORDER BY sales DESC) AS avg_sales
+FROM market_fact_full mff
+JOIN cust_dimen cd ON mff.cust_id=cd.cust_id;
