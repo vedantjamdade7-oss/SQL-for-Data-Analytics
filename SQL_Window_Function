@@ -152,3 +152,10 @@ SELECT city, ROUND(sales,2) AS sales,
 AVG(sales) OVER(PARTITION BY city ORDER BY sales DESC) AS avg_sales
 FROM market_fact_full mff
 JOIN cust_dimen cd ON mff.cust_id=cd.cust_id;
+
+-- find the rank(), dense_rank, row_num() for the rows based on order_quantity
+SELECT order_quantity,
+RANK() OVER(ORDER BY order_quantity DESC) AS order_quantity_rank,
+DENSE_RANK() OVER(ORDER BY order_quantity DESC) AS order_quantity_dense_rank,
+ROW_NUMBER() OVER(ORDER BY order_quantity DESC) AS order_quantity_row_num
+FROM market_fact_full;
