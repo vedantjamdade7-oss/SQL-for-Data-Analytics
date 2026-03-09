@@ -166,3 +166,13 @@ RANK() OVER(ORDER BY sales DESC) AS sales_rank,
 DENSE_RANK() OVER(ORDER BY sales DESC) AS sales_dense_rank,
 ROW_NUMBER() OVER(ORDER BY sales DESC) AS sales_row_num
 FROM market_fact_full;
+
+-- find the rank(), dense_rank(), row_num() for Bangalore and Chennai cities based on avg sales
+SELECT city, ROUND(AVG(sales),2) AS avg_sales,
+RANK() OVER(ORDER BY AVG(sales) DESC) AS city_rank,
+DENSE_RANK() OVER(ORDER BY AVG(sales) DESC) AS city_dense_rank,
+ROW_NUMBER() OVER(ORDER BY AVG(sales) DESC) AS city_row_num
+FROM cust_dimen cd 
+JOIN market_fact_full mff ON cd.cust_id=mff.cust_id
+WHERE city IN ('Bangalore','Chennai')
+GROUP BY city;
