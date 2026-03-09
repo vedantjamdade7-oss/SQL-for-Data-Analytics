@@ -176,3 +176,19 @@ FROM cust_dimen cd
 JOIN market_fact_full mff ON cd.cust_id=mff.cust_id
 WHERE city IN ('Bangalore','Chennai')
 GROUP BY city;
+
+/* find rank(), dense_rank(), row_num() based on avg_profit for the orders placed in October,
+March for the years 2011 and 2012 from regular air ship_mode */
+
+SELECT MONTH(order_date), YEAR(order_date), 
+AVG(profit) AS avg_profit,
+RANK() OVER(ORDER BY AVG(profit) DESC) AS avg_profit_rank,
+DENSE_RANK() OVER(ORDER BY AVG(profit) DESC) AS avg_profit_dense_rank,
+ROW_NUMBER() OVER(ORDER BY AVG(profit) DESC) AS avg_profit_row_num
+FROM market_fact_full mff
+JOIN orders_dimen od ON mff.ord_id=od.ord_id
+JOIN shipping_dimen sd ON mff.ship_id=sd.ship_id
+WHERE MONTH(order_date) IN ('10','03')
+AND YEAR(order_date) IN ('2011','2012')
+AND ship_mode='Regular Air'
+GROUP BY MONTH(order_date), YEAR(order_date);
