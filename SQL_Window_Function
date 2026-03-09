@@ -4,6 +4,12 @@ Window Functions are advanced SQL functions used to perform calculations across 
 
 Unlike GROUP BY, they do not collapse rows. Every row remains visible.
 
+OVER() clause:
+
+It is used with window functions to define that window
+1. partition the rows to form a set of rows
+2. order rows within the partition into a particular order
+
 Basic Syntax:
 
 SELECT column_name,
@@ -136,3 +142,4 @@ DENSE_RANK()
 LEAD()
 
 LAG()
+
