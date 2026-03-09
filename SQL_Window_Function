@@ -159,3 +159,10 @@ RANK() OVER(ORDER BY order_quantity DESC) AS order_quantity_rank,
 DENSE_RANK() OVER(ORDER BY order_quantity DESC) AS order_quantity_dense_rank,
 ROW_NUMBER() OVER(ORDER BY order_quantity DESC) AS order_quantity_row_num
 FROM market_fact_full;
+
+-- find the rank(), dense_rank(), row_num() based on sales amount
+SELECT *, 
+RANK() OVER(ORDER BY sales DESC) AS sales_rank,
+DENSE_RANK() OVER(ORDER BY sales DESC) AS sales_dense_rank,
+ROW_NUMBER() OVER(ORDER BY sales DESC) AS sales_row_num
+FROM market_fact_full;
