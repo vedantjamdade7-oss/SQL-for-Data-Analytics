@@ -211,3 +211,12 @@ FROM cust_dimen cd
 JOIN market_fact_full mff ON cd.cust_id=mff.cust_id)
 SELECT * FROM cust_summary
 WHERE cust_rank=1;
+
+-- find the profit change compared to previous day and next day for each order date
+SELECT order_date, profit, 
+LAG(profit) OVER(ORDER BY order_date) AS prev_day_profit,
+LEAD(profit) OVER(ORDER BY order_date) AS next_day_profit,
+(profit - (LAG(profit,1,0) OVER(ORDER BY order_date))) AS profit_change
+FROM market_fact_full mff
+JOIN orders_dimen od ON mff.ord_id=od.ord_id;
+
