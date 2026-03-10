@@ -200,3 +200,14 @@ RANK() OVER(ORDER BY sales DESC) AS sales_rank
 FROM market_fact_full)
 SELECT * FROM sales_summary
 WHERE sales_rank<=5;
+
+-- find the details of the order who made highest sales in each city without using limit & offset
+WITH cust_summary AS (
+SELECT cd.cust_id, city, ROUND(sales,2) AS sales, 
+RANK() OVER(PARTITION BY city ORDER BY sales DESC) AS cust_rank,
+DENSE_RANK() OVER(PARTITION BY city ORDER BY sales DESC) AS cust_dense_rank,
+ROW_NUMBER() OVER(PARTITION BY city ORDER BY sales DESC) AS cust_row_num
+FROM cust_dimen cd
+JOIN market_fact_full mff ON cd.cust_id=mff.cust_id)
+SELECT * FROM cust_summary
+WHERE cust_rank=1;
