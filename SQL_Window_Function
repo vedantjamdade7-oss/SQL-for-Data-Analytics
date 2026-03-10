@@ -192,3 +192,11 @@ WHERE MONTH(order_date) IN ('10','03')
 AND YEAR(order_date) IN ('2011','2012')
 AND ship_mode='Regular Air'
 GROUP BY MONTH(order_date), YEAR(order_date);
+
+-- first 5 records with highest sales values without using Limit & offset
+WITH sales_summary AS (
+SELECT *, 
+RANK() OVER(ORDER BY sales DESC) AS sales_rank
+FROM market_fact_full)
+SELECT * FROM sales_summary
+WHERE sales_rank<=5;
