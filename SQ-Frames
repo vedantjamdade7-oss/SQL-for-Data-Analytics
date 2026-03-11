@@ -26,3 +26,12 @@ ROWS BETWEEN CURRENT ROW AND CURRENT ROW
 
 It means the calculation uses only the current row.
 
+2️⃣ UNBOUNDED PRECEDING
+
+Includes all rows before the current row.
+
+Example:
+
+ROWS BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW
+
+Used for running totals.
