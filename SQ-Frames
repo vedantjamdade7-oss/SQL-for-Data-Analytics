@@ -1,0 +1,17 @@
+Window Function Frames
+
+A Frame defines the subset of rows inside a window that the function should use for calculation.
+
+It creates a moving or dynamic window of rows around the current row.
+
+Frame clauses are used with window functions like:
+
+SUM()
+
+AVG()
+
+COUNT()
+
+LAG()
+
+LEAD()
