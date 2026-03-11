@@ -1,7 +1,6 @@
 Window Function Frames
 
 A Frame defines the subset of rows inside a window that the function should use for calculation.
-
 It creates a moving or dynamic window of rows around the current row.
 
 Frame clauses are used with window functions like:
@@ -15,3 +14,15 @@ COUNT()
 LAG()
 
 LEAD()
+
+
+Types of Frame Boundaries 
+
+1️⃣ CURRENT ROW
+Refers to the current row being processed.
+
+Example:
+ROWS BETWEEN CURRENT ROW AND CURRENT ROW
+
+It means the calculation uses only the current row.
+
