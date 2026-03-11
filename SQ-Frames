@@ -33,3 +33,11 @@ Example:
 ROWS BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW
 
 Used for running totals.
+
+3️⃣ UNBOUNDED FOLLOWING
+Includes all rows after the current row.
+
+Example:
+ROWS BETWEEN CURRENT ROW AND UNBOUNDED FOLLOWING
+
+Used for future cumulative calculations.
