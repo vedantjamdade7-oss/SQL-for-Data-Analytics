@@ -49,3 +49,11 @@ Example:
 ROWS BETWEEN 2 PRECEDING AND CURRENT ROW
 
 This creates a moving window of the last 3 rows.
+
+5️⃣ N ROWS FOLLOWING
+Includes N rows after the current row.
+
+Example:
+ROWS BETWEEN CURRENT ROW AND 2 FOLLOWING
+
+This looks forward to future rows.
