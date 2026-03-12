@@ -57,3 +57,17 @@ Example:
 ROWS BETWEEN CURRENT ROW AND 2 FOLLOWING
 
 This looks forward to future rows.
+
+USE market_star_schema;
+
+
+-- find the running total or cummulative sum of sales for prod_6
+WITH prod_6_summary AS (
+SELECT mff.ord_id, od.order_date, ROUND(sales,2) AS sales 
+FROM market_fact_full mff
+JOIN orders_dimen od ON mff.ord_id=od.ord_id
+WHERE prod_id = 'Prod_6')
+SELECT *, 
+SUM(sales) OVER(ORDER BY order_date ROWS BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW) AS cum_sales,
+AVG(sales) OVER(ORDER BY order_date ROWS BETWEEN CURRENT ROW AND UNBOUNDED FOLLOWING) AS moving_avg
+FROM prod_6_summary;
