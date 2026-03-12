@@ -63,10 +63,15 @@ USE market_star_schema;
 
 -- find the moving average of sales for prod_6 using a window frame of 3 rows (current row and 2 preceding rows)
 WITH prod_6_summary AS (
-SELECT ord_id, order_date, ROUND(sales,2) AS sales
-FROM market_fact_full
+SELECT od.ord_id, prod_id, order_date, ROUND(sales,2) AS sales
+FROM market_fact_full mff
+JOIN orders_dimen od ON mff.ord_id=od.ord_id
+WHERE prod_id = 'prod_4'
 )
-
+SELECT *,
+AVG(sales) OVER(ORDER BY order_date ROWS BETWEEN 2 PRECEDING AND CURRENT ROW) AS moving_avg 
+FROM prod_6_summary
+ORDER BY order_date;
 
 -- find the running total or cummulative sum of sales for prod_6
 WITH prod_6_summary AS (
