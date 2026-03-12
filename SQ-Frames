@@ -58,8 +58,9 @@ ROWS BETWEEN CURRENT ROW AND 2 FOLLOWING
 
 This looks forward to future rows.
 
-USE market_star_schema;
+EXAMPLE:
 
+USE market_star_schema;
 
 -- find the moving average of sales for prod_6 using a window frame of 3 rows (current row and 2 preceding rows)
 WITH prod_6_summary AS (
