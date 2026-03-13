@@ -5,3 +5,7 @@ SQL provides various string functions that allow you to manipulate and work with
 1️⃣ CHARACTER_LENGTH()
 
 This function returns the number of characters in a string.
+
+2️⃣ UPPER()
+
+This converts text to uppercase.
