@@ -13,3 +13,11 @@ This converts text to uppercase.
 3️⃣ LOWER()
 
 This converts text to lowercase.
+
+4️⃣ LEFT()
+
+This returns characters from the left side of a string.
+
+5️⃣ RIGHT()
+
+This returns characters from the right side of a string.
