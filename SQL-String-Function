@@ -22,6 +22,10 @@ This returns characters from the left side of a string.
 
 This returns characters from the right side of a string.
 
-5️⃣ RIGHT()
+6️⃣ SUBSTRING()
 
-This returns characters from the right side.
+Extracts part of a string.
+
+7️⃣ CONCAT()
+
+This joins multiple strings together.
