@@ -9,3 +9,7 @@ This function returns the number of characters in a string.
 2️⃣ UPPER()
 
 This converts text to uppercase.
+
+3️⃣ LOWER()
+
+This converts text to lowercase.
