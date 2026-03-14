@@ -31,3 +31,5 @@ Extracts part of a string.
 This joins multiple strings together.
 
 USE market_star_schema;
+
+SELECT CHARACTER_LENGTH("Data Analysis");
