@@ -33,3 +33,7 @@ This joins multiple strings together.
 USE market_star_schema;
 
 SELECT CHARACTER_LENGTH("Data Analysis");
+
+-- find the minimum and maximum character lengths of customer name
+SELECT MIN(CHARACTER_LENGTH(customer_name)), MAX(CHARACTER_LENGTH(customer_name))
+FROM cust_dimen;
