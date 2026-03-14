@@ -41,3 +41,6 @@ FROM cust_dimen;
 SELECT customer_name,
 UPPER(customer_name), LOWER(customer_name)
 FROM cust_dimen;
+
+-- find the first 3 characters of the city name.
+SELECT LEFT("Hyderabad",3);
