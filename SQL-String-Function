@@ -56,7 +56,8 @@ SELECT city, SUBSTRING(city,2)
 FROM cust_dimen;
 
 
-
+SELECT city, SUBSTRING(city,-3,4) 
+FROM cust_dimen;
 
 
 
