@@ -38,6 +38,7 @@ SELECT CHARACTER_LENGTH("Data Analysis");
 SELECT MIN(CHARACTER_LENGTH(customer_name)), MAX(CHARACTER_LENGTH(customer_name))
 FROM cust_dimen;
 
+-- convert the customer name to uppercase and lowercase
 SELECT customer_name,
 UPPER(customer_name), LOWER(customer_name)
 FROM cust_dimen;
