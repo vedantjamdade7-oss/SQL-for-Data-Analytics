@@ -47,8 +47,8 @@ FROM cust_dimen;
 -- find the first 3 characters of the city name.
 SELECT LEFT("Hyderabad",3);
 
-
-SELECT city, SUBSTRING(city,2,3) 
+-- find the city name that Start from position 2 Extract 3 characters
+SELECT city, SUBSTRING(city, 2, 3)
 FROM cust_dimen;
 
 
