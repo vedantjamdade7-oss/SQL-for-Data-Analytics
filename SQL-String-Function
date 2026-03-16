@@ -66,7 +66,7 @@ SELECT CONCAT("Data"," ","Analysis"," !");
 SELECT city, state, CONCAT(city, "-",state)
 FROM cust_dimen;
 
-
+-- concat the first three letters and last three letters of state
 SELECT state,
 CONCAT(LEFT(state,3),RIGHT(state,3)) AS result,
 CHARACTER_LENGTH(CONCAT(LEFT(state,3),RIGHT(state,3))) AS count
