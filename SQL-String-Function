@@ -62,6 +62,7 @@ FROM cust_dimen;
 -- concatenate the stings "Data Analysis" and "!" with a space in between
 SELECT CONCAT("Data"," ","Analysis"," !");
 
+-- concatenate the city and state with a hyphen('-') in between
 SELECT city, state, CONCAT(city, "-",state)
 FROM cust_dimen;
 
