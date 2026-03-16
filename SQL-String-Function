@@ -59,6 +59,7 @@ FROM cust_dimen;
 SELECT city, SUBSTRING(city,-3,4) 
 FROM cust_dimen;
 
+-- concatenate the stings "Data Analysis" and "!" with a space in between
 SELECT CONCAT("Data"," ","Analysis"," !");
 
 
