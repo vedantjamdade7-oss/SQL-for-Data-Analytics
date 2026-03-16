@@ -67,6 +67,10 @@ SELECT city, state, CONCAT(city, "-",state)
 FROM cust_dimen;
 
 
+SELECT state,
+CONCAT(LEFT(state,3),RIGHT(state,3)) AS result,
+CHARACTER_LENGTH(CONCAT(LEFT(state,3),RIGHT(state,3))) AS count
+FROM cust_dimen;
 
 
 
