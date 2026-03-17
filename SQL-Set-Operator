@@ -7,3 +7,7 @@ The two most common ones are:
 1️⃣ UNION
 
 UNION combines results and removes duplicates.
+
+2️⃣ UNION ALL
+
+UNION ALL combines results and keeps duplicates.
