@@ -12,3 +12,7 @@ UNION ALL combines results and keeps duplicates.
 
 🔹UNION and UNION ALL
  Union aand Union ALL will combine the results from two queries, but the difference is 'UNION' will not allow duplicates but 'UNION ALL' will allow duplicates.
+
+ Example:
+
+ 
