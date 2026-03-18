@@ -15,4 +15,8 @@ UNION ALL combines results and keeps duplicates.
 
  Example:
 
- 
+ SELECT * FROM cust_dimen
+WHERE city='Chennai'
+UNION ALL
+SELECT * FROM cust_dimen
+WHERE city='Delhi';
