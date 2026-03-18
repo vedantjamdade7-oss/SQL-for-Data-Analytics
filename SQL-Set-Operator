@@ -22,8 +22,7 @@ UNION ALL
 SELECT * FROM cust_dimen
 WHERE city='Delhi';
 
-
-SELECT * FROM 
+-- Show all records from both tables, including matched and unmatched rows, by combining LEFT JOIN and RIGHT JOIN results.
 cust_dimen cd LEFT JOIN market_fact_full mff
 ON cd.cust_id=mff.cust_id
 UNION 
