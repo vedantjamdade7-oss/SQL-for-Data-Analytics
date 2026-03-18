@@ -21,3 +21,12 @@ WHERE city='Chennai'
 UNION ALL
 SELECT * FROM cust_dimen
 WHERE city='Delhi';
+
+
+SELECT * FROM 
+cust_dimen cd LEFT JOIN market_fact_full mff
+ON cd.cust_id=mff.cust_id
+UNION 
+SELECT * FROM 
+cust_dimen cd RIGHT JOIN market_fact_full mff
+ON cd.cust_id=mff.cust_id;
