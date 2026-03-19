@@ -30,9 +30,10 @@ SELECT * FROM
 cust_dimen cd RIGHT JOIN market_fact_full mff
 ON cd.cust_id=mff.cust_id;
 
+-- find customers from Nagpur and Mumbai
 SELECT cust_id, city, customer_segment
 FROM cust_dimen
-WHERE city='Delhi'
+WHERE city='Nagpur'
 UNION ALL
 SELECT cust_id, city, customer_name, customer_segment
 FROM cust_dimen
