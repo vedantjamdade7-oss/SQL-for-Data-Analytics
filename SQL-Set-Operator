@@ -29,3 +29,11 @@ UNION
 SELECT * FROM 
 cust_dimen cd RIGHT JOIN market_fact_full mff
 ON cd.cust_id=mff.cust_id;
+
+SELECT cust_id, city, customer_segment
+FROM cust_dimen
+WHERE city='Delhi'
+UNION ALL
+SELECT cust_id, city, customer_name, customer_segment
+FROM cust_dimen
+WHERE city='Mumbai';
