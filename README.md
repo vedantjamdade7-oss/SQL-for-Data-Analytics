@@ -29,9 +29,10 @@ The goal of this repository is to:
 
 ---
 
-#📥 MySQL Installation Guide To help beginners, I have included a complete guide for installing MySQL: 
+# 📥 MySQL Installation Guide To help beginners, I have included a complete guide for installing MySQL: 
 
-📄 **MySQL Workbench Installation Guide:** 👉 Add your PDF file here in repo and link it like: [Download MySQL Installation Guide](https://www.youtube.com/watch?v=hiS_mWZmmI0)
+📄 * MySQL Workbench Installation Guide: * 
+[Download MySQL Installation Guide](https://www.youtube.com/watch?v=hiS_mWZmmI0)
 
 ---
 
