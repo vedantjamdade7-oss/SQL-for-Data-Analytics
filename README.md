@@ -101,12 +101,5 @@ Through this repository, I have:
 
 ---
 
-# 🌟 Connect With Me
-
-* LinkedIn (Add your link here)
-* Email (optional)
-
----
-
 ⭐ If you find this repository helpful, please consider giving it a star!
 
