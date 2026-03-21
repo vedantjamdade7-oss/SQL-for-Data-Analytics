@@ -42,35 +42,38 @@ To help beginners, I have included a complete guide for installing MySQL:
 
 # 📚 SQL Topics Covered
 
-This repository includes structured SQL learning:
+This repository covers SQL concepts from basic to advanced levels used in data analysis:
 
-* SQL Basics
-* SQL Keywords
-* SQL Operators
-* SQL Joins
-* SQL Subqueries
-* SQL Set Operators
-* SQL String Functions
-* SQL Window Functions
+## 🔹 Fundamentals
+- SQL Commands (DDL, DML, DQL)
+- Data Types
+- Constraints (Primary Key, Foreign Key, NOT NULL, UNIQUE)
+
+## 🔹 Data Querying
+- SELECT Statements
+- WHERE Clause (Data Filtering)
+- ORDER BY
+- GROUP BY
+- HAVING Clause
+
+## 🔹 Data Analysis
+- Aggregation Functions (SUM, AVG, COUNT, MAX, MIN)
+- Data Exploration Techniques
+
+## 🔹 Advanced SQL
+- Joins (INNER, LEFT, RIGHT)
+- Subqueries
+- Common Table Expressions (CTE)
+- Window Functions
+- Frame Clause (ROWS / RANGE)
+- CASE Statements
+
+## 🔹 Additional Concepts
+- Set Operators (UNION, INTERSECT)
+- String Functions
 
 ---
 
-# 📂 Repository Structure
-
-```
-SQL-for-Data-Analytics
-│
-├── SQL-Basics
-├── SQL-Keywords
-├── SQL-Operators
-├── SQL-Joins
-├── SQL-Subqueries
-├── SQL-Set-Operator
-├── SQL-String-Function
-├── SQL-Window-Function
-```
-
----
 
 # 📊 Skills Demonstrated
 
