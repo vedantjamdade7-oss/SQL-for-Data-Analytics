@@ -23,21 +23,12 @@ FROM orders_dimen;
 
 EXAMPLE:
 
--- find the total sales for each month and year of the orders.
-SELECT 
-    YEAR(order_date) AS year,
-    MONTH(order_date) AS month,
-    SUM(sales) AS total_sales
-FROM market_fact_full mff
-JOIN orders_dimen od ON mff.ord_id = od.ord_id
-GROUP BY YEAR(order_date), MONTH(order_date)
-ORDER BY year, month;
 
 -- orders details for the orders which were placed in 2010
 SELECT * FROM orders_dimen
 WHERE YEAR(order_date)='2010';
 
--- no of orders are placed in year of March 2010
+-- Number of orders are placed in year of March 2010
 SELECT * FROM orders_dimen
 WHERE YEAR(order_date)='2010'
 AND MONTH(order_date)='03';
