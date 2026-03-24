@@ -63,6 +63,16 @@ ON cd.cust_id=mff.cust_id
 GROUP BY city
 ORDER BY total_sales DESC;
 
+-- find the total sales for each month and year of the orders.
+SELECT 
+    YEAR(order_date) AS year,
+    MONTH(order_date) AS month,
+    SUM(sales) AS total_sales
+FROM market_fact_full mff
+JOIN orders_dimen od ON mff.ord_id = od.ord_id
+GROUP BY YEAR(order_date), MONTH(order_date)
+ORDER BY year, month;
+
 --  find the total sales for each city in which the orders placed in years of 2011 and 2012
 SELECT city, SUM(sales) AS total_sales FROM cust_dimen cd
 JOIN market_fact_full mff
