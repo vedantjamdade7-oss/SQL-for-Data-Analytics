@@ -23,7 +23,6 @@ FROM orders_dimen;
 
 EXAMPLE:
 
-
 -- orders details for the orders which were placed in 2010
 SELECT * FROM orders_dimen
 WHERE YEAR(order_date)='2010';
