@@ -2,7 +2,7 @@
 
 ## 👨‍💻 About Me
 
-Hi, I'm **Vedant Jamdade** 👋
+Hi, I'm **Vedant Jamdade** 
 🎓 B.Tech CSE Student
 📊 Aspiring Data Analyst
 
