@@ -31,7 +31,7 @@ The goal of this repository is to:
 
 # 📥 MySQL Installation Guide To help beginners, I have included a complete guide for installing MySQL: 
 
-📄 **MySQL Workbench Installation Guide:** 
+📄 ***MySQL Workbench Installation Guide:** 
 [Download MySQL Installation Guide](https://www.youtube.com/watch?v=hiS_mWZmmI0)
 
 ---
