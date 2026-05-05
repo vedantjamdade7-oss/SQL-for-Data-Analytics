@@ -1,4 +1,4 @@
-# 📊 SQL for Data Analytic
+# 📊 SQL for Data Analytics
 
 ## 👨‍💻 About Me
 
