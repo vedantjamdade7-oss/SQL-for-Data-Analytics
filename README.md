@@ -1,6 +1,6 @@
 # 📊 SQL for Data Analytics
 
-## 👨‍💻 About M
+## 👨‍💻 About Me
 
 Hi, I'm **Vedant Jamdade** 
 🎓 B.Tech CSE Student
